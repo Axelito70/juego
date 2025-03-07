@@ -1,0 +1,5 @@
+body{
+    background: url('../img/bg01.webp') fixed no-repeat;
+    background-size: cover;
+    background-position: center center;
+}

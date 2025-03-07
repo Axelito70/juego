@@ -1,0 +1,30 @@
+{
+  "name": "Game_Front_End",
+  "version": "1.0.0",
+  "description": "Juego desarrollado en clase de 8SIS",
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.7",
+    "@babel/preset-env": "^7.26.7",
+    "babel-loader": "^9.2.1",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "scripts": {
+    "build-b": "babel src -d controller --watch",
+    "build": "webpack",
+    "dev": "webpack serve --open",
+    "start": "webpack serve --mode development --open"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "css-loader": "^7.1.2",
+    "sass": "^1.84.0",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
+    "sweetalert2": "^11.16.1"
+  }
+}

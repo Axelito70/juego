@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./public/img/favico.png" type="image/x-icon">
+    <title>Desarrollo de Aplicaciones Fron End</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center mt-2">
+            <div class="col-12 text-center">
+                <h1 class="display-4 text-danger">
+                    <i class="fa-solid fa-cloud me-3"></i>
+                    KAME-HOUSE - GAME
+                    <i class="fa-brands fa-battle-net"></i>
+                </h1>
+                <hr class="text-danger">
+            </div>
+
+            <div id="player1" class="col-md-5 text-center">
+                <h2 class="text-danger"><i class="fa-solid fa-gamepad me-2"></i>JUGADOR 1</h2>
+                <hr>
+                <div class="form-floating mb-3">
+                    <input id="user_name1" type="text" class="form-control" placeholder="nombre usuario">
+                    <label for="user_name" class="text-danger"><i class="fa-solid fa-gamepad me-2"></i> Nombre usuario</label>
+                </div>
+                <div id="player1_seleccion" class="row">
+                    <div class="col-md-3">
+                        <img src="./public/img/seleccion/sc01.webp" width="100%" alt="Vegito" class="btn btn-danger rounded-circle mt-2">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="./public/img/seleccion/sc03.webp" width="100%" alt="Trunks" class="btn btn-danger rounded-circle mt-2">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="./public/img/seleccion/sc06.webp" width="100%" alt="Gohan" class="btn btn-danger rounded-circle mt-2">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="./public/img/seleccion/sc05.webp" width="100%" alt="Goku" class="btn btn-danger rounded-circle mt-2">
+                    </div>
+                </div>
+                <button id="btn_player1" type="button" class="btn btn-danger w-100 mt-3">Aceptar</button>
+            </div>
+
+            <div id="player2" class="col-md-5 text-center">
+                <h2 class="text-primary"><i class="fa-solid fa-gamepad me-2"></i>JUGADOR 2</i></h2>
+                <hr>
+                <div class="form-floating mb-3">
+                    <input id="user_name2" type="text" class="form-control" placeholder="nombre usuario">
+                    <label for="user_name" class="text-primary"><i class="fa-solid fa-gamepad me-2"></i> Nombre usuario</label>
+                </div>
+                <div id="player2_seleccion" class="row">
+                    <div class="col-md-3">
+                        <img src="./public/img/seleccion/sc02.webp" width="100%" alt="Veguetta" class="btn btn-primary rounded-circle mt-2">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="./public/img/seleccion/sc04.webp" width="100%" alt="Pikoro" class="btn btn-primary rounded-circle mt-2">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="./public/img/seleccion/sc07.webp" width="100%" alt="Gogeta" class="btn btn-primary rounded-circle mt-2">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="./public/img/seleccion/sc08.webp" width="100%" alt="Cell" class="btn btn-primary rounded-circle mt-2">
+                    </div>
+                </div>
+                <button id="btn_player2" type="button" class="btn btn-primary w-100 mt-3">Aceptar</button>
+            </div>
+
+            <div id="iniciar_juego" class="row d-none">
+                <div id="player1_avatar" class="col-md-5 text-center"> <!--Jugador Numero1 barras-->
+                    <h2 id="p1" class="text-danger">Test</h2>
+                    <div class="rounded-3 p-3" style="background: rgb(255, 2555, 255,0.6);">
+                        <div class="row">
+                            <div class="col-2">
+                                <p class="text-info">VIDA</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                        100%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <p class="text-primary">KI</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div id="ki_py1" class="progress-bar bg-primary" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                        100%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <p class="text-warning">Energia</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div id="energia_py1" class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                        100%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!--Botonoes de jugador 1-->
+                    <img id="avatar1" class="mx-auto d-block" src="./public/img/Goku/base.png" width="40%">
+                    <button id="btn_atk_py1" type="button" class="btn btn-primary mb-3">ATK Basico</button>
+                    <button id="btn_esp_py1" type="button" class="btn btn-danger mb-3">ATK Especial</button>
+                    <button id="btn_ermi_py1" type="button" class="btn btn-success mb-3">Semilla <span id="se_p1" class="badge bg-warning">3</span></button>
+                    <button id="btn_ki_py1" type="button" class="btn btn-warning mb-3">Cargar Ki</button>
+                </div>
+    
+                <div class="col-2 text-center align-self-center">
+                    <h1 class="display-1 text-dark">VS</h1>
+                </div>
+    
+                <div id="player2_avatar" class="col-md-5 text-center"><!--Jugador Numero2 barras-->
+                    <h2 id="p2" class="text-primary">Test</h2>
+                    <div class="rounded-3 p-3" style="background: rgb(255, 2555, 255,0.6);">
+                        <div class="row">
+                            <div class="col-2">
+                                <p class="text-info">VIDA</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div id="vida_py2" class="progress-bar bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                        100%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <p class="text-primary">KI</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                        100%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">
+                                <p class="text-warning">Energia</p>
+                            </div>
+                            <div class="col-10">
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                        100%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Botonoes de jugador 2-->
+                    <img id="avatar2" class="mx-auto d-block" src="./public/img/Veguetta/base.png" width="40%">
+                    <button id="btn_atk_py2" disabled type="button" class="btn btn-primary mb-3">ATK Basico</button>
+                    <button id="btn_esp_py2" disabled type="button" class="btn btn-danger mb-3">ATK Especial</button>
+                    <button id="btn_ermi_py2" disabled type="button" class="btn btn-success mb-3">Semilla <span id="se_p1" class="badge bg-warning">3</span></button>
+                    <button id="btn_ki_py2" disabled type="button" class="btn btn-warning mb-3">Cargar Ki</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./bundle.js"></script>
+</body>
+</html>
