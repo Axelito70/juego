@@ -4,7 +4,7 @@ class Game {
     #energia = 90;
     #semilla = 3;
     #user_name = "";
-    
+
     constructor(user_name) {
         this.#user_name = user_name;
     }
@@ -30,14 +30,14 @@ class Game {
     }
 
     atk_basico(jugador) {
-        this.#ki -= this.#ki < 5 ? 0 : 5;
-        this.#energia -= this.#energia < 10 ? 0 : 10;
+        this.#ki = Math.max(this.#ki - 5, 0);
+        this.#energia = Math.max(this.#energia - 10, 0);
         jugador.setVida(15);
     }
 
     atk_especial(jugador) {
-        this.#ki -= this.#ki < 10 ? 0 : 10;
-        this.#energia -= this.#energia < 20 ? 0 : 20;
+        this.#ki = Math.max(this.#ki - 10, 0);
+        this.#energia = Math.max(this.#energia - 20, 0);
         jugador.setVida(30);
     }
 
@@ -49,9 +49,14 @@ class Game {
             this.#semilla--;
         }
     }
-   aumentarki(){
-    this.#ki += 15
-   }
+
+    aumentarKi() {
+        if (this.#ki >= 100) {
+        } else {
+            let aumento = Math.floor(this.#ki * 0.15); 
+            this.#ki = Math.min(this.#ki + aumento, 100);
+        }
+    }
 }
 
 export default Game;
