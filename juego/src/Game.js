@@ -44,16 +44,15 @@ class Game {
     usarSemilla() {
         if (this.#semilla > 0) {
             this.#vida = Math.min(this.#vida + 50, 100);
-            this.#ki = Math.min(this.#ki + 40, 80);
-            this.#energia = Math.min(this.#energia + 45, 90);
+            this.#ki = Math.min(this.#ki + 40, 100);
+            this.#energia = Math.min(this.#energia + 45, 100);
             this.#semilla--;
         }
     }
 
     aumentarKi() {
-        if (this.#ki >= 100) {
-        } else {
-            let aumento = Math.floor(this.#ki * 0.15); 
+        if (this.#ki < 100) {
+            let aumento = Math.floor(this.#ki * 0.15);
             this.#ki = Math.min(this.#ki + aumento, 100);
         }
     }

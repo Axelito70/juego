@@ -1,5 +1,113 @@
-body{
-    background: url('../img/bg01.webp') fixed no-repeat;
-    background-size: cover;
-    background-position: center center;
+/* Estilos generales */
+body {
+    font-family: 'Dragon Ball Font', sans-serif;
+    background-image: url('../img/bg01.webp'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija la imagen para que no se desplace */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para los botones */
+button {
+    background: linear-gradient(135deg, #FF8C00 0%, #FF4500 100%);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #FF4500 0%, #8B0000 100%);
+}
+
+/* Estilos específicos para los botones de ataque */
+#btn_atk_py1, #btn_atk_py2 {
+    background: linear-gradient(135deg, #00BFFF 0%, #1E90FF 100%);
+}
+
+#btn_esp_py1, #btn_esp_py2 {
+    background: linear-gradient(135deg, #FF1493 0%, #8B008B 100%);
+}
+
+#btn_ermi_py1, #btn_ermi_py2 {
+    background: linear-gradient(135deg, #32CD32 0%, #006400 100%);
+}
+
+#btn_ki_py1, #btn_ki_py2 {
+    background: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%);
+}
+
+/* Estilos para SweetAlert2 */
+.swal2-popup {
+    background: linear-gradient(135deg, #FF8C00 0%, #FF4500 100%) !important; /* Fondo degradado naranja */
+    border-radius: 10px !important;
+    border: 2px solid #FF4500 !important;
+    color: #000 !important; /* Texto en negro */
+}
+
+.swal2-title {
+    font-family: 'Dragon Ball Font', sans-serif;
+    font-size: 24px !important;
+    color: #000 !important; /* Texto en negro */
+}
+
+.swal2-html {
+    font-family: Arial, sans-serif;
+    font-size: 16px !important;
+    color: #000 !important; /* Texto en negro */
+}
+
+.swal2-confirm-btn {
+    background: linear-gradient(135deg, #FF8C00 0%, #FF4500 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: bold !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+}
+
+.swal2-cancel-btn {
+    background: linear-gradient(135deg, #FF4500 0%, #8B0000 100%) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: bold !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    /* background-color: rgba(0, 0, 0, 0.7); */ /* Eliminamos el fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Estilos para las barras de progreso */
+.progress {
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo semitransparente para las barras */
+    border-radius: 5px;
+    height: 20px;
+}
+
+.progress-bar {
+    border-radius: 5px;
+}
+
+/* Estilos para las imágenes de los personajes */
+img {
+    border: 3px solid #FFD700; /* Borde dorado para las imágenes */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+    border-color: #FF4500; /* Cambia el color del borde al pasar el mouse */
 }
