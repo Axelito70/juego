@@ -193,7 +193,7 @@ const verificarVictoria = () => {
         });
         return true; // Indicar que hay un ganador
     }
-    return false; // No hay ganador aún
+    return false; // No hay ganador aun
 };
 
 // Eventos para seleccionar personajes
@@ -277,29 +277,29 @@ document.getElementById("btn_esp_py1").addEventListener('click', () => {
 });
 document.getElementById("btn_ermi_py1").addEventListener('click', () => {
     if (player1.getSemilla() > 0) {
-        player1.usarSemilla(); // Usar la semilla (ya limita los valores a 100)
-        document.getElementById("se_p1").innerText = player1.getSemilla(); // Actualizar el número de semillas
-        actualizarBarras(); // Actualizar las barras de estado
+        player1.usarSemilla(); 
+        document.getElementById("se_p1").innerText = player1.getSemilla(); 
+        actualizarBarras(); 
         customSwal.fire({
             title: "Semilla Aumentada",
             text: "¡Has usado una semilla del ermitaño!",
             icon: "success",
         }).then(() => {
-            turno = 2; // Cambiar el turno al jugador 2
-            actualizarTurno(); // Actualizar el estado de los botones
+            turno = 2; 
+            actualizarTurno(); 
         });
     }
 });
 document.getElementById("btn_ki_py1").addEventListener('click', () => {
-    player1.aumentarKi(); // Aumentar ki (ya limita el valor a 100)
-    actualizarBarras(); // Actualizar las barras de estado
+    player1.aumentarKi(); 
+    actualizarBarras(); 
     customSwal.fire({
         title: "Ki Aumentado",
         text: "¡Has aumentado tu ki!",
         icon: "success",
     }).then(() => {
-        turno = 2; // Cambiar el turno al jugador 2
-        actualizarTurno(); // Actualizar el estado de los botones
+        turno = 2; 
+        actualizarTurno(); 
     });
 });
 
@@ -314,7 +314,7 @@ document.getElementById("btn_esp_py2").addEventListener('click', () => {
 document.getElementById("btn_ermi_py2").addEventListener('click', () => {
     if (player2.getSemilla() > 0) {
         player2.usarSemilla(); // Usar la semilla (ya limita los valores a 100)
-        document.getElementById("se_p2").innerText = player2.getSemilla(); // Actualizar el número de semillas
+        document.getElementById("se_p2").innerText = player2.getSemilla(); 
         actualizarBarras(); // Actualizar las barras de estado
         customSwal.fire({
             title: "Semilla Aumentada",
@@ -339,7 +339,7 @@ document.getElementById("btn_ki_py2").addEventListener('click', () => {
     });
 });
 
-// Función para actualizar las barras de estado
+
 const actualizarBarras = () => {
     actualizarBarra("vida_py1", player1.getVida(), 100);
     actualizarBarra("ki_py1", player1.getKi(), 80);
@@ -349,7 +349,7 @@ const actualizarBarras = () => {
     actualizarBarra("energia_py2", player2.getEnergia(), 90);
 };
 
-// Función para actualizar una barra de progreso específica
+
 const actualizarBarra = (id, valor, max) => {
     let porcentaje = Math.max(0, parseInt((valor * 100) / max));
     document.getElementById(id).style.width = `${porcentaje}%`;

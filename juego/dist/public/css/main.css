@@ -10,7 +10,7 @@ body {
     padding: 0;
 }
 
-/* Estilos para los botones */
+
 button {
     background: linear-gradient(135deg, #FF8C00 0%, #FF4500 100%);
     border: none;
@@ -26,7 +26,7 @@ button:hover {
     background: linear-gradient(135deg, #FF4500 0%, #8B0000 100%);
 }
 
-/* Estilos específicos para los botones de ataque */
+
 #btn_atk_py1, #btn_atk_py2 {
     background: linear-gradient(135deg, #00BFFF 0%, #1E90FF 100%);
 }
@@ -60,7 +60,7 @@ button:hover {
 .swal2-html {
     font-family: Arial, sans-serif;
     font-size: 16px !important;
-    color: #000 !important; /* Texto en negro */
+    color: #000 !important; 
 }
 
 .swal2-confirm-btn {
@@ -91,7 +91,7 @@ button:hover {
 
 /* Estilos para las barras de progreso */
 .progress {
-    background-color: rgba(255, 255, 255, 0.3); /* Fondo semitransparente para las barras */
+    background-color: rgba(255, 255, 255, 0.3); 
     border-radius: 5px;
     height: 20px;
 }
@@ -100,14 +100,14 @@ button:hover {
     border-radius: 5px;
 }
 
-/* Estilos para las imágenes de los personajes */
+
 img {
-    border: 3px solid #FFD700; /* Borde dorado para las imágenes */
+    border: 3px solid #FFD700; 
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
 img:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
-    border-color: #FF4500; /* Cambia el color del borde al pasar el mouse */
+    transform: scale(1.05); 
+    border-color: #FF4500;
 }
